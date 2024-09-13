@@ -42,4 +42,4 @@ app.listen(port, () => {
     console.log('Escuchando en el puerto: ' + port);
 })
 
-module.exports = app
+// module.exports = app
