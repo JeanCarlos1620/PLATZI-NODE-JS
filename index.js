@@ -20,11 +20,11 @@ const options = {
 
 app.use(cors(options));
 
-routerApi(app);
-
 app.get('/api', (req, res) => {
     res.send('Hola mi primer server');
 })
+
+routerApi(app);
 
 app.use(logErrors);
 app.use(boomErrorHandler);
