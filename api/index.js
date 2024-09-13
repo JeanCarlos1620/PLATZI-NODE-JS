@@ -20,14 +20,9 @@ const options = {
 
 app.use(cors(options));
 
-// app.get('/api', (req, res) => {
-//     res.send('Hola mi primer server');
-// })
-
-app.get('/api/prueba', (req, res) => {
-    res.send('prueba');
+app.get('/api', (req, res) => {
+    res.send('Hola mi primer server');
 })
-
 
 routerApi(app);
 
