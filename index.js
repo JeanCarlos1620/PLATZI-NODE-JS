@@ -20,7 +20,7 @@ const options = {
 
 app.use(cors(options));
 
-app.get('/api/v1/productos', (req, res) => {
+app.get('/api', (req, res) => {
     res.send('Hola mi primer server');
 })
 
@@ -33,5 +33,3 @@ app.use(errorHandler);
 app.listen(port, () => {
     console.log('Escuchando en el puerto: ' + port);
 })
-
-module.exports = app;
