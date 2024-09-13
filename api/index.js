@@ -1,7 +1,7 @@
 const express = require('express');
-const routerApi = require('./api/routes');
+const routerApi = require('./routes');
 const cors = require('cors');
-const { errorHandler, logErrors, boomErrorHandler } = require('./api/middlewares/errorHandler');
+const { errorHandler, logErrors, boomErrorHandler } = require('./middlewares/errorHandler');
 const app = express();
 const port = process.env.PORT || 3000;
 
