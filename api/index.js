@@ -24,11 +24,6 @@ app.get('/api', (req, res) => {
     res.send('Hola mi primer server');
 })
 
-app.use('/api/v1/productos', (req, res) => {
-    res.json({ message: 'Rutas de productos' });
-});
-
-
 routerApi(app);
 
 app.use(logErrors);
