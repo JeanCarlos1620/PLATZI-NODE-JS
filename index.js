@@ -17,8 +17,14 @@ const options = {
         }
     }
 }
+
 app.use(cors(options));
-routerApi(app);
+
+app.get('/api/v1/productos', (req, res) => {
+    res.send('Hola mi primer server');
+})
+
+// routerApi(app);
 
 app.use(logErrors);
 app.use(boomErrorHandler);
@@ -27,3 +33,5 @@ app.use(errorHandler);
 app.listen(port, () => {
     console.log('Escuchando en el puerto: ' + port);
 })
+
+module.exports = app;
