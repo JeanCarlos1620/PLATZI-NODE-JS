@@ -17,29 +17,13 @@ const options = {
         }
     }
 }
-
 app.use(cors(options));
-
-// app.get('/api', (req, res) => {
-//     res.send('Hola mi primer server');
-// })
-
 routerApi(app);
 
 app.use(logErrors);
 app.use(boomErrorHandler);
 app.use(errorHandler);
 
-// app.get('/categories/:categoryId/productos/:productId', (req, res) => {
-//     const { categoryId, productId } = req.params;
-//     res.send({
-//         categoryId,
-//         productId
-//     })
-// })
-
 app.listen(port, () => {
     console.log('Escuchando en el puerto: ' + port);
 })
-
-// module.exports = app
