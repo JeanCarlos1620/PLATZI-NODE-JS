@@ -1,7 +1,7 @@
 const express = require('express');
 const routerApi = require('./routes');
 const cors = require('cors');
-const { errorHandler, logErrors, boomErrorHandler } = require('./middlewares/errorHandler');
+const { errorHandler, logErrors, boomErrorHandler, ormErrorHandler } = require('./middlewares/errorHandler');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -29,6 +29,7 @@ routerApi(app);
 app.use(logErrors);
 app.use(boomErrorHandler);
 app.use(errorHandler);
+app.use(ormErrorHandler);
 
 app.listen(port, () => {
     console.log('Escuchando en el puerto: ' + port);

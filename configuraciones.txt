@@ -1,0 +1,30 @@
+// posgres con docker
+docker-compose up -d postgres
+docker-compose ps
+docker-compose down
+docker-compose exec postgres bash
+ls -l
+psql -h localhost -d my_store -U jean
+\d+ -- ver tablas
+\q -- salir de la base de datos
+exit -- salir del contenedor
+
+// correr pgadmin con docker
+docker-compose up -d pgadmin
+docker ps -- saber el id
+docker inspect 69b723f1806c
+"IPAddress": "172.18.0.2" con esta ip conectas desde pgadmin 
+
+para conectar node con postgres
+https://node-postgres.com
+
+npm i dotenv
+
+se instala squelize
+https://sequelize.org/docs/v6/getting-started/
+
+
+docker-compose up -d mysql
+docker-compose up -d phpmyadmin
+
+npm i --save mysql2
