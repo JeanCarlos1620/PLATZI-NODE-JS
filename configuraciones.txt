@@ -27,4 +27,11 @@ https://sequelize.org/docs/v6/getting-started/
 docker-compose up -d mysql
 docker-compose up -d phpmyadmin
 
-npm i --save mysql2
+npm i --save mysql2 // instalar si sale mensaje de error 
+
+npm i sequelize-cli --save-dev
+
+// configurar y luego colocar las migraciones con el siguietne comando 
+npm run migrations:generate create-user
+npm run migrations:generate add-role
+npm run migrations:run
