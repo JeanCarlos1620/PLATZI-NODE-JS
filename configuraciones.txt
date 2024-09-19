@@ -35,4 +35,8 @@ npm i sequelize-cli --save-dev
 npm run migrations:generate create-user
 npm run migrations:generate add-role
 npm run migrations:generate change-user-id
-npm run migrations:run
+npm run migrations:generate create-customer
+npm run migrations:generate products
+npm run migrations:generate order
+
+npm run migrations:run // con este comando se crean las tablas despues de crear las migraciones

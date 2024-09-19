@@ -13,8 +13,7 @@ class UserService {
     }
 
     async find() {
-        const rta = await models.User.findAll();
-        // const rta = await client.query('select * from tasks;')
+        const rta = await models.User.findAll({ include: 'customer' });
         return rta;
     }
 
