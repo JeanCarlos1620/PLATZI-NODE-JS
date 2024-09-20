@@ -38,5 +38,6 @@ npm run migrations:generate change-user-id
 npm run migrations:generate create-customer
 npm run migrations:generate products
 npm run migrations:generate order
+npm run migrations:generate order-product
 
 npm run migrations:run // con este comando se crean las tablas despues de crear las migraciones
