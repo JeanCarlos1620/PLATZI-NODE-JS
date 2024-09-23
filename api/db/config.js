@@ -1,8 +1,8 @@
 const { config } = require('../config/config');
 
-// const USER = encodeURIComponent(config.dbUser);
-// const PASSWORD = encodeURIComponent(config.dbPassword);
-// const URI = `postgres://${USER}:${PASSWORD}@${config.dbHost}:${config.dbPort}/${config.dbName}`;
+const USER = encodeURIComponent(config.dbUser);
+const PASSWORD = encodeURIComponent(config.dbPassword);
+const URI = `postgres://${USER}:${PASSWORD}@${config.dbHost}:${config.dbPort}/${config.dbName}`;
 
 // module.exports = {
 //     development: {
@@ -17,17 +17,17 @@ const { config } = require('../config/config');
 
 module.exports = {
     development: {
-        url: config.dbUrl,
+        url: URI,
         dialect: config.dbEngine
     },
     production: {
-        url: config.dbUrl,
+        url: URI,
         dialect: config.dbEngine, // postgres,
-        dialectOptions: {
-            ssl: {
-                require: true,
-                rejectUnauthorized: false,
-            }
-        }
+        // dialectOptions: {
+        //     ssl: {
+        //         require: true,
+        //         rejectUnauthorized: false,
+        //     }
+        // }
     }
 }
