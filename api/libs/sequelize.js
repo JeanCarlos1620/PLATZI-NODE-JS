@@ -23,7 +23,7 @@ const options = {
     ...(config.isProd && {
         dialectOptions: {
             ssl: {
-                // require: true,
+                require: true,
                 rejectUnauthorized: false,
             }
         }

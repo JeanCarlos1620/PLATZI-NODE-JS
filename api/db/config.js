@@ -25,7 +25,7 @@ module.exports = {
         dialect: config.dbEngine, // postgres,
         dialectOptions: {
             ssl: {
-                // require: true,
+                require: true,
                 rejectUnauthorized: false,
             }
         }
