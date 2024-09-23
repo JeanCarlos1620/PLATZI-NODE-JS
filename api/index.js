@@ -18,7 +18,7 @@ const options = {
     }
 }
 
-// app.use(cors(options));
+app.use(cors(options));
 
 app.get('/api', (req, res) => {
     res.send('Hola mi primer server');
