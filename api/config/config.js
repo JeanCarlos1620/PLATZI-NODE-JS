@@ -10,7 +10,7 @@ const config = {
     // dbName: process.env.DB_NAME,
     // dbPort: process.env.DB_PORT,
     dbEngine: process.env.DB_ENGINE, // postgress
-    dbUrl: process.env.DATABASE_URL
+    dbUrl: process.env.POSTGRES_URL
 }
 
 
