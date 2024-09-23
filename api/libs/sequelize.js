@@ -27,7 +27,7 @@ if (config.isProd) {
     options.dialectModule = require('pg');
 }
 
-const sequelize = new Sequelize(URI, options)
+const sequelize = new Sequelize(config.dbUrl, options)
 
 
 module.exports = sequelize;
