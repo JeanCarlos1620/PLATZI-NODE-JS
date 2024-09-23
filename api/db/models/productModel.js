@@ -47,6 +47,7 @@ const ProductSchema = {
 
 class Product extends Model {
     static associate(models) {
+        // Relación Muchos a Uno
         this.belongsTo(models.Category, { as: 'category' });
     }
 

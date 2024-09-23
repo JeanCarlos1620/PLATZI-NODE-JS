@@ -44,7 +44,9 @@ const CustomerSchema = {
 }
 class Customer extends Model {
     static associate(models) {
+        // Relación Muchos a Uno
         this.belongsTo(models.User, { as: 'user' });
+        // Relación Uno a Muchos
         this.hasMany(models.Order, { as: 'orders', foreignKey: 'customerId' })
     }
     static config(sequelize) {

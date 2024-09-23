@@ -33,6 +33,7 @@ const UserSchema = {
 
 class User extends Model {
     static associate(models) {
+        // Relación Uno a Uno
         this.hasOne(models.Customer, { as: 'customer', foreignKey: 'userId' });
     }
 

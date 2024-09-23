@@ -43,7 +43,9 @@ const OrderSchema = {
 
 class Order extends Model {
     static associate(models) {
+        // Relación Muchos a Uno
         this.belongsTo(models.Customer, { as: 'customer' });
+        // Relación Muchos a Muchos
         this.belongsToMany(models.Product, {
             as: 'items',
             through: models.OrderProduct,

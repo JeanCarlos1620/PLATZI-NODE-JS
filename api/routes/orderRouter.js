@@ -8,12 +8,12 @@ const { createOrderSchema, getOrderSchema, addItemSchema } = require('../schemas
 
 const service = new OrderService();
 
-router.get('/', async(req, res) => {
+router.get('/', async(req, res, next) => {
     try {
         const orders = await service.find();
         res.send(orders);
     } catch (error) {
-        res.status(404).json({ message: error })
+        next(error);
     }
 })
 

@@ -28,6 +28,7 @@ const CategorySchema = {
 
 class Category extends Model {
     static associate(models) {
+        // Relación Uno a Muchos
         this.hasMany(models.Product, { as: 'products', foreignKey: 'categoryId' });
     }
 
