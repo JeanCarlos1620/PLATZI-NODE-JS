@@ -21,13 +21,20 @@ const URI = `postgres://${USER}:${PASSWORD}@${config.dbHost}:${config.dbPort}/${
 const options = {
     dialect: config.dbEngine,
     logging: config.isProd ? false : console.log,
+    ...(config.isProd && {
+        dialectOptions: {
+            ssl: {
+                rejectUnauthorized: false,
+            }
+        }
+    })
 };
 
-if (config.isProd) {
-    options.dialectModule = require('pg');
-}
+// if (config.isProd) {
+//     options.dialectModule = require('pg');
+// }
 
 const sequelize = new Sequelize(config.dbUrl, options)
-
+setupModels(sequelize);
 
 module.exports = sequelize;

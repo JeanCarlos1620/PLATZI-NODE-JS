@@ -1,12 +1,5 @@
 require('dotenv').config();
 
-import pg from 'pg';
-const { Pool } = pg;
-
-const pool = new Pool({
-    connectionString: process.env.POSTGRES_URL,
-})
-
 const config = {
     env: process.env.NODE_ENV || 'dev',
     isProd: process.env.NODE_ENV,
@@ -17,7 +10,7 @@ const config = {
     // dbName: process.env.DB_NAME,
     // dbPort: process.env.DB_PORT,
     dbEngine: process.env.DB_ENGINE, // postgress
-    dbUrl: pool
+    dbUrl: process.env.DATABASE_URL
 }
 
 
